@@ -44,7 +44,7 @@ class Migration1 extends Migration {
     final List<Map> reads = [
       {
         'title': 'Head First Design Patterns',
-        'author': 'Bismillah',
+        'author': 'Bismillah Alhamdulillah',
         'year': 2004
       },
       {
