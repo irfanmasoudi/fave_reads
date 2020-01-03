@@ -57,7 +57,7 @@ class ReadsController extends ResourceController {
     final int deleteCount = await readQuery.delete();
 
     if (deleteCount == 0) {
-      return Response.notFound(body: 'not found hmmmmm.');
+      return Response.notFound(body: 'Item has deleted and not found right now.');
     }
     return Response.ok('Deleted $deleteCount items.');
   }
