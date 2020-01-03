@@ -61,5 +61,4 @@ class ReadsController extends ResourceController {
     }
     return Response.ok('Deleted $deleteCount items.');
   }
-  
 }
