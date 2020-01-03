@@ -49,6 +49,17 @@ class ReadsController extends ResourceController {
     return Response.ok(updatedQuery);
   }
 
+  @Operation.delete('id')
+  Future<Response> deletedRead(@Bind.path('id') int id) async {
+    final readQuery = Query<Read>(context)
+      ..where((read) => read.id).equalTo(id);
 
+    final int deleteCount = await readQuery.delete();
 
+    if (deleteCount == 0) {
+      return Response.notFound(body: 'Item not found.');
+    }
+    return Response.ok('Deleted $deleteCount items.');
+  }
+  
 }
